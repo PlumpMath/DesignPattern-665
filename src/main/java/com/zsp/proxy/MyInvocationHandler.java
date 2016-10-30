@@ -1,4 +1,4 @@
-package com.zsp.proxy.demo;
+package com.zsp.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

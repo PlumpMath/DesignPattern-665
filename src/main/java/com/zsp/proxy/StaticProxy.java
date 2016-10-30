@@ -3,17 +3,17 @@ package com.zsp.proxy;
 /**
  * Created by Administrator on 2016/10/29.
  */
-public class Proxy implements Subject {
+public class StaticProxy implements Subject {
 
     private Subject subject = null;
 
-    public Proxy(Subject subject) {
+    public StaticProxy(Subject subject) {
         this.subject = subject;
     }
 
-    public void request() {
+    public void doSomething(String str) {
         this.before();
-        this.subject.request();
+        this.subject.doSomething(str);
         this.after();
     }
 

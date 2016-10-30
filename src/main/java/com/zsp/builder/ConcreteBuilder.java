@@ -3,7 +3,7 @@ package com.zsp.builder;
 /**
  * Created by Administrator on 2016/10/29.
  */
-public class ConcreteProduct extends Builder {
+public class ConcreteBuilder extends Builder {
 
     private Product product = new Product();
 
