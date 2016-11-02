@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by zsp-pc on 2016/11/1.
  */
-public class ProtoTypeDemoMain {
+public class PrototypeDemoMain {
 
     private static int MAX_COUNT = 6;
 
@@ -15,9 +15,10 @@ public class ProtoTypeDemoMain {
         Mail mail = new Mail(new AdvTemplate());
         mail.setTail("XX银行版权所有");
         while (i < MAX_COUNT) {
-            mail.setAppellation(getRandString(5) + " 先生（女士）");
-            mail.setReceiver(getRandString(5) + "@" + getRandString(8) + ".com");
-            sendMail(mail);
+            Mail cloneMail = mail.clone();
+            cloneMail.setAppellation(getRandString(5) + " 先生（女士）");
+            cloneMail.setReceiver(getRandString(5) + "@" + getRandString(8) + ".com");
+            sendMail(cloneMail);
             i++;
         }
     }
